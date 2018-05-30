@@ -1,10 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>System of Register</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/libraries/bootstrap/bootstrap.min.css}" >
+    <link rel="stylesheet" th:href="@{/css/index_style.css}">
 </head>
 <body>
+
+    <header th:replace="layout/navbar :: navbar"></header>
+
+    <div th:class="container">
+
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="display-4"> Hello Administrator </h1>
+        <p class="lead"> This system allows you to create, read, update and delete a student or a teacher.</p>
+        <hr class="my-4">
+        <p> This system was made in Spring MVC </p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Let's start</a>
+    </div>
 
 </body>
 </html>

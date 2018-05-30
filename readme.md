@@ -1,5 +1,5 @@
 # Spring Application
-## Register Students
+## Register Students and Teachers 
 
 A simple small CRUD using :
 

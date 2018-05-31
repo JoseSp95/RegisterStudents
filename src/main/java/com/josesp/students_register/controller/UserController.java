@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -27,6 +28,14 @@ public class UserController {
         Page<User> users = this.userService.findAll(pageable);
         model.addAttribute("users", users);
         return "list";
+    }
+
+    @RequestMapping(value = "/users/delete/{id}")
+    public String deleteUser(@PathVariable(value = "id") Long id) {
+        if (id != null && id >= 0){
+            this.userService.deleteById(id);
+        }
+        return "redirect:/users";
     }
 
 }

@@ -5,6 +5,7 @@
     <title>Users list</title>
     <link rel="stylesheet" type="text/css" th:href="@{/libraries/bootstrap/bootstrap.min.css}" >
     <link rel="stylesheet" th:href="@{/css/list_style.css}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <header th:replace="layout/navbar :: navbar"></header>
@@ -19,14 +20,26 @@
                         <th scope="col">Name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Type</th>
+                        <th scope="col">Edit</th>
+                        <th scope="col">Delete</th>
                     </tr>
                     </thead>
                     <tbody>
                         <tr th:each="user : ${users}">
                             <th scope="row" th:text="${user.id}"></th>
-                            <td th:text="${user.name}"></td>
+                            <td class="" th:text="${user.name}"></td>
                             <td th:text="${user.email}"></td>
                             <td th:text="${user.type}"></td>
+                            <td>
+                                <a class="btn btn-primary" href="">
+                                    <i class="material-icons"> edit </i>
+                                </a>
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" th:href="@{/users/delete/{id}(id = ${user.id})}" onclick="return confirm('Are you sure?');">
+                                    <i class="material-icons"> delete </i>
+                                </a>
+                            </td>
                         </tr>
                     </tbody>
                 </table>

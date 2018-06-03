@@ -36,4 +36,27 @@ insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95s
 insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
 insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
 insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+insert into users(name, email, type, created_at) values ('Jose Suarez', 'jose95sp@outlook.com', 'student', now());
+insert into users(name, email, type, created_at) values ('Victor Principe', 'victor@outlook.com', 'teacher', now());
+
 

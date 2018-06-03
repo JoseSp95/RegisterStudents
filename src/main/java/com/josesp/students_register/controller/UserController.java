@@ -1,6 +1,7 @@
 package com.josesp.students_register.controller;
 
 import com.josesp.students_register.model.User;
+import com.josesp.students_register.paginator.PageRender;
 import com.josesp.students_register.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -34,8 +35,10 @@ public class UserController {
         if (page > 0) {
             page -= 1;
         }
-        Pageable pageable = PageRequest.of(page,10);
+        Pageable pageable = PageRequest.of(page,5);
         Page<User> users = this.userService.findAll(pageable);
+        PageRender<User> linkPages = new PageRender<>(users, "/users");
+        model.addAttribute("page", linkPages);
         model.addAttribute("users", users);
         return "list";
     }

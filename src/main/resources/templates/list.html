@@ -10,6 +10,12 @@
 <body>
     <header th:replace="layout/navbar :: navbar"></header>
 
+    <div>
+        <div class="alert alert-success" th:if="${success}">
+            <span th:text="${success}"></span>
+        </div>
+    </div>
+
     <div class="container mt-5">
         <div class="row">
             <div class="col-12">
@@ -43,6 +49,14 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <nav th:replace="layout/paginator-nav :: paginator"></nav>
             </div>
         </div>
     </div>

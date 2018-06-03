@@ -31,7 +31,7 @@
                             <td th:text="${user.email}"></td>
                             <td th:text="${user.type}"></td>
                             <td>
-                                <a class="btn btn-primary" href="">
+                                <a class="btn btn-primary" th:href="@{/users/edit/{id}(id = ${user.id})}">
                                     <i class="material-icons"> edit </i>
                                 </a>
                             </td>

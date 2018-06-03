@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" type="text/css" th:href="@{/libraries/bootstrap/bootstrap.min.css}" >
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+
+    <header th:replace="layout/navbar :: navbar"></header>
+
+    <div class="container mt-3">
+        <div class="row">
+            <div class="col-6 offset-sm-3">
+                <form th:method="post" th:action="@{/users/save}" th:object="${user}">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Name" th:field="*{name}">
+                        <div th:if="${#fields.hasErrors('name')}">
+                            <small id="name_error" class="form-text text-danger" th:errors="*{name}"></small>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Email" th:field="*{email}">
+                        <div th:if="${#fields.hasErrors('email')}">
+                            <small id="email_error" class="form-text text-danger" th:errors="*{email}"></small>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-5 offset-2 custom-control custom-radio">
+                            <input type="radio" id="student" name="type"
+                                   class="custom-control-input" th:checked="*{type}" th:field="*{type}" th:value="student">
+                            <label class="custom-control-label" for="student">Student</label>
+                        </div>
+                        <div class="col-5 custom-control custom-radio">
+                            <input type="radio" id="teacher" name="type"
+                                   class="custom-control-input" th:checked="*{type}" th:field="*{type}" th:value="teacher">
+                            <label class="custom-control-label" for="teacher">Teacher</label>
+                        </div>
+                    </div>
+                    <div th:if="${#fields.hasErrors('type')}">
+                        <small id="type_error" class="form-text text-danger" th:errors="*{type}"></small>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-4 offset-4">
+                            <button type="submit" class="btn btn-primary px-3">Create User</button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
